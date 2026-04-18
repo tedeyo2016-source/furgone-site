@@ -134,7 +134,7 @@ export default function FurGoneWebsite() {
           <p className="mt-4 text-slate-600 text-lg">
             This form is currently a visual placeholder. Connect it to your email platform before collecting real addresses.
           </p>
-          <form className="mt-10 flex flex-col md:flex-row gap-0 max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-white shadow-sm" onSubmit={(e) => e.preventDefault()}>
+          <div className="mt-10 flex flex-col md:flex-row gap-0 max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-white shadow-sm">
             <input
               type="email"
               placeholder="Enter your email"
@@ -146,7 +146,7 @@ export default function FurGoneWebsite() {
             >
               Notify Me
             </button>
-          </form>
+          </div>
         </div>
       </section>
 
