@@ -5,7 +5,7 @@ export default function FurGoneWebsite() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="relative w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 border">
-              <div className="text-3xl leading-none">🐾</div>
+              <img src="/logo.png" alt="FurGone logo" className="w-10 h-10 object-contain" />
               <div className="absolute -top-1 -right-1 text-sky-300 text-sm">✦</div>
             </div>
             <div>
@@ -53,12 +53,11 @@ export default function FurGoneWebsite() {
           <div className="flex items-center justify-center">
             <div className="text-center rounded-[2rem] bg-white border shadow-sm p-10 w-full max-w-lg">
               <div className="relative inline-block">
-                <div className="text-[10rem] leading-none">🐾</div>
+                <img src="/logo.png" alt="FurGone logo" className="w-48 mx-auto" />
                 <div className="absolute -top-2 right-1 text-sky-300 text-4xl">✦</div>
               </div>
               <div className="text-5xl md:text-6xl font-bold text-slate-900 -mt-2">FurGone</div>
-              <p className="mt-3 text-slate-500">Replace this symbol with your final uploaded logo before launch.</p>
-            </div>
+              </div>
           </div>
         </div>
       </section>
@@ -154,7 +153,7 @@ export default function FurGoneWebsite() {
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <div className="flex items-center justify-center gap-3">
             <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 border">
-              <div className="text-3xl leading-none">🐾</div>
+              <img src="/logo.png" alt="FurGone logo" className="w-8 h-8 object-contain" />
               <div className="absolute -top-1 -right-1 text-sky-300 text-xs">✦</div>
             </div>
             <div className="text-3xl font-bold text-slate-900">FurGone</div>
