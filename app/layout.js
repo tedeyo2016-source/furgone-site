@@ -9,6 +9,16 @@ export const metadata = {
     "dog hair remover",
     "cat hair remover",
     "pet hair cleaner",
-    "lint roller alternative"
+    "lint roller alternative",
   ],
 };
+
+import "./globals.css";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
