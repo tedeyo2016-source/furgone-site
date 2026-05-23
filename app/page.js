@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
                 <img src="/logo.png" alt="FurGone logo" className="w-48 mx-auto" />
                 <div className="absolute -top-2 right-1 text-sky-300 text-4xl">✦</div>
               </div>
-              <div className="text-5xl md:text-6xl font-bold text-slate-900 -mt-2">FurGone</div>
+              <div className="text-5xl md:text-6xl font-bold text-slate-900 -mt-2">FurGone Pet</div>
               </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ const handleSubmit = async (e) => {
               <img src="/logo.png" alt="FurGone logo" className="w-8 h-8 object-contain" />
               <div className="absolute -top-1 -right-1 text-sky-300 text-xs">✦</div>
             </div>
-            <div className="text-3xl font-bold text-slate-900">FurGone</div>
+            <div className="text-3xl font-bold text-slate-900">FurGone Pet</div>
           </div>
           <p className="mt-4 text-slate-500">© 2026 FurGone · All rights reserved.</p>
           <div className="mt-4 flex items-center justify-center gap-6 text-slate-600">
