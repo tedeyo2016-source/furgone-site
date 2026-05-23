@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
             </ul>
 
             <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-800 text-sm">
-              Amazon listing link not added yet. Update this button when your listing goes live.
+              Amazon listing link not added yet. It will be updated soon as listing goes live.
             </div>
 
             <div className="mt-6">
