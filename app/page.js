@@ -1,4 +1,21 @@
+"use client";
+
+import { useState } from "react";
 export default function FurGoneWebsite() {
+  const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  await fetch("https://script.google.com/macros/s/AKfycbyY-9KjRoe45Iy2KDdfMQTDUKFDqu0gZD3ycxq-I79kZjC4-wLfao5OVQGuHHN5Fme5/exec", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+  });
+
+  setMessage("Thank you! We'll notify you when FurGone Pet launches.");
+  setEmail("");
+};
   return (
     <div className="min-h-screen bg-white text-slate-800">
       <header className="border-b bg-white">
@@ -131,21 +148,30 @@ export default function FurGoneWebsite() {
         <div id="notify" className="mt-12 rounded-[2rem] bg-gradient-to-b from-slate-50 to-slate-100 border shadow-sm p-10 md:p-14 text-center max-w-4xl mx-auto">
           <h3 className="text-4xl md:text-5xl font-bold text-slate-900">Get Notified</h3>
           <p className="mt-4 text-slate-600 text-lg">
-            This form is currently a visual placeholder. Connect it to your email platform before collecting real addresses.
+            Be first to know when FurGone Pet launches. Get launch updates, special offers, and pet hair cleaning tips.
           </p>
-          <div className="mt-10 flex flex-col md:flex-row gap-0 max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-white shadow-sm">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-5 text-xl outline-none"
-            />
-            <button
-              type="submit"
-              className="bg-blue-300 px-8 py-5 text-white text-2xl font-semibold hover:bg-blue-400 transition"
-            >
-              Notify Me
-            </button>
-          </div>
+          <form onSubmit={handleSubmit} className="mt-10 flex max-w-3xl mx-auto rounded-2xl overflow-hidden bg-white shadow">
+  <input
+    type="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="Enter your email"
+    required
+    className="flex-1 px-6 py-5 text-lg outline-none"
+  />
+  <button
+    type="submit"
+    className="px-8 py-5 bg-sky-400 text-white font-bold text-lg"
+  >
+    Notify Me
+  </button>
+</form>
+
+{message && (
+  <p className="mt-4 text-green-600 font-semibold text-center">
+    {message}
+  </p>
+)}
         </div>
       </section>
 
