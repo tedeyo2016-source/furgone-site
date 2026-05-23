@@ -97,9 +97,9 @@ const handleSubmit = async (e) => {
 
   <div className="flex gap-3 overflow-x-auto pb-2">
     <img src="/open-view.png" alt="Open view" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/couch.png" alt="FurGone Pet on couch" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/thank-you-card.png" alt="Thank you card" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/manual.png" alt="Instruction manual" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/FurGone Pet on Couch.png" alt="FurGone Pet on couch" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/FurGone Thank-you card Print_ready.png" alt="Thank you card" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/Easy to you.png" alt="Instruction manual" className="w-28 h-28 object-cover rounded-xl border" />
   </div>
 </div>
           <div>
