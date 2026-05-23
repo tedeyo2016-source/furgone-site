@@ -26,7 +26,7 @@ const handleSubmit = async (e) => {
               <div className="absolute -top-1 -right-1 text-sky-300 text-sm">✦</div>
             </div>
             <div>
-              <div className="text-3xl font-bold tracking-tight text-slate-900">FurGone</div>
+              <div className="text-3xl font-bold tracking-tight text-slate-900">FurGone Pet</div>
               <div className="text-xs text-slate-500">Launching soon on Amazon</div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm text-slate-600 mb-6">
-              FurGone • Reusable Pet Hair Remover
+              FurGone Pet • Reusable Pet Hair Remover
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
               Launching Soon <br /> on Amazon
