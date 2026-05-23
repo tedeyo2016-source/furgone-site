@@ -88,15 +88,13 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-10 items-center">
-          <div className="rounded-3xl bg-slate-50 border shadow-sm min-h-[340px] flex items-center justify-center p-8 text-center">
-            <div>
-              <div className="text-7xl mb-4">📦</div>
-              <div className="text-2xl font-semibold text-slate-900">Product Image Placeholder</div>
-              <p className="mt-3 text-slate-500 max-w-md">
-                Add your real product or supplier image here before publishing widely.
-              </p>
-            </div>
-          </div>
+          <div className="rounded-3xl bg-white border shadow-sm p-6">
+  <img
+    src="/hero.png"
+    alt="FurGone Pet Hair Remover"
+    className="w-full rounded-2xl"
+  />
+</div>
 
           <div>
             <ul className="space-y-6 text-2xl text-slate-700">
