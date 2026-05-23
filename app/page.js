@@ -88,13 +88,20 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-10 items-center">
-          <div className="grid grid-cols-2 gap-4">
-  <img src="/hero.png" alt="Front View" className="rounded-xl shadow" />
-  <img src="/open-view.png" alt="Open View" className="rounded-xl shadow" />
-  <img src="/FurGone Pet on Couch.png" alt="In Hand" className="rounded-xl shadow" />
-  <img src="/FurGone Thank-you card Print_ready.png" alt="Packaging" className="rounded-xl shadow" />
-</div>
+          <div className="grid gap-4">
+  <img
+    src="/hero.png"
+    alt="FurGone Pet Hair Remover"
+    className="w-full rounded-2xl shadow"
+  />
 
+  <div className="flex gap-3 overflow-x-auto pb-2">
+    <img src="/open-view.png" alt="Open view" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/couch.png" alt="FurGone Pet on couch" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/thank-you-card.png" alt="Thank you card" className="w-28 h-28 object-cover rounded-xl border" />
+    <img src="/manual.png" alt="Instruction manual" className="w-28 h-28 object-cover rounded-xl border" />
+  </div>
+</div>
           <div>
             <ul className="space-y-6 text-2xl text-slate-700">
               <li className="flex items-start gap-4">
