@@ -88,12 +88,11 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-10 items-center">
-          <div className="rounded-3xl bg-white border shadow-sm p-6">
-  <img
-    src="/hero.png"
-    alt="FurGone Pet Hair Remover"
-    className="w-full rounded-2xl"
-  />
+          <div className="grid grid-cols-2 gap-4">
+  <img src="/hero.png" alt="Front View" className="rounded-xl shadow" />
+  <img src="/open-view.png" alt="Open View" className="rounded-xl shadow" />
+  <img src="/FurGone Pet on Couch.png" alt="In Hand" className="rounded-xl shadow" />
+  <img src="/FurGone Thank-you card Print_ready.png" alt="Packaging" className="rounded-xl shadow" />
 </div>
 
           <div>
