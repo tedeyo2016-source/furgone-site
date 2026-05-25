@@ -3,6 +3,26 @@
 import { useState, useEffect } from "react";
 
 export default function FurGoneWebsite() {
+  const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+
+const images = [
+  "/hero.png",
+  "/open-view.png",
+  "/FurGone Pet on Couch.png",
+  "/FurGone Thank-you card Print_ready.png",
+  "/Easy to you.png",
+];
+
+const [currentImage, setCurrentImage] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  }, 3000);
+
+  return () => clearInterval(timer);
+}, [])};
   const images = [
   "/hero.png",
   "/open-view.png",
