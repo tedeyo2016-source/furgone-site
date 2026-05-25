@@ -4,36 +4,40 @@ import { useState, useEffect } from "react";
 
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
-const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
-const images = [
-  "/hero.png",
-  "/open-view.png",
-  "/FurGone Pet on Couch.png",
-  "/FurGone Thank-you card Print_ready.png",
-  "/Easy to you.png",
-];
-
-const [currentImage, setCurrentImage] = useState(0);
-
-useEffect(() => {
-  const timer = setInterval(() => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  }, 3000);
-
-  return () => clearInterval(timer);
-}, [])};
- 
-const [currentImage, setCurrentImage] = useState(0);
   const images = [
-  "/hero.png",
-  "/open-view.png",
-  "/FurGone Pet on Couch.png",
-  "/FurGone Thank-you card Print_ready.png",
-  "/Easy to you.png"
-];
+    "/hero.png",
+    "/open-view.png",
+    "/FurGone Pet on Couch.png",
+    "/FurGone Thank-you card Print_ready.png",
+    "/Easy to you.png",
+  ];
 
-const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbyY-9KjRoe45Iy2KDdfMQTDUKFDqu0gZD3ycxq-I79kZjC4-wLfao5OVQGuHHN5Fme5/exec",
+      {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      }
+    );
+
+    setMessage("Thank you! We'll notify you when FurGone Pet launches.");
+    setEmail("");
+  };
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
 const [message, setMessage] = useState("");
@@ -121,40 +125,7 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-10 items-center">
-          <div className="grid gap-4">
-  <img
-    src="/hero.png"
-    alt="FurGone Pet Hair Remover"
-    className="w-full rounded-2xl shadow"
-  />
-
-  <div className="flex gap-3 overflow-x-auto pb-2">
-    <img src="/open-view.png" alt="Open view" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/FurGone Pet on Couch.png" alt="FurGone Pet on couch" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/FurGone Thank-you card Print_ready.png" alt="Thank you card" className="w-28 h-28 object-cover rounded-xl border" />
-    <img src="/Easy to you.png" alt="Instruction manual" className="w-28 h-28 object-cover rounded-xl border" />
-  </div>
-</div>
-          <div>
-            <ul className="space-y-6 text-2xl text-slate-700">
-              <li className="flex items-start gap-4">
-                <span className="text-blue-300 text-3xl">✓</span>
-                <span><strong className="text-slate-900">Reusable</strong>, eco-friendly</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-blue-300 text-3xl">✓</span>
-                <span><strong className="text-slate-900">Easy to use</strong> and clean</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-blue-300 text-3xl">✓</span>
-                <span><strong className="text-slate-900">No refills</strong> needed</span>
-              </li>
-            </ul>
-
-            <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-800 text-sm">
-              Amazon listing link not added yet. It will be updated soon as listing goes live.
-            </div>
-<div className="relative">
+         <div className="relative">
 
   <img
     src={images[currentImage]}
@@ -187,6 +158,25 @@ const handleSubmit = async (e) => {
   </button>
 
 </div>
+    <div>
+            <ul className="space-y-6 text-2xl text-slate-700">
+              <li className="flex items-start gap-4">
+                <span className="text-blue-300 text-3xl">✓</span>
+                <span><strong className="text-slate-900">Reusable</strong>, eco-friendly</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="text-blue-300 text-3xl">✓</span>
+                <span><strong className="text-slate-900">Easy to use</strong> and clean</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="text-blue-300 text-3xl">✓</span>
+                <span><strong className="text-slate-900">No refills</strong> needed</span>
+              </li>
+            </ul>
+
+            <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-800 text-sm">
+              Amazon listing link not added yet. It will be updated soon as listing goes live.
+            </div>
             <div className="mt-6">
               <button
                 type="button"
