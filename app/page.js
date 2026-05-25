@@ -23,22 +23,6 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, [])};
-  const images = [
-  "/hero.png",
-  "/open-view.png",
-  "/FurGone Pet on Couch.png",
-  "/FurGone Thank-you card Print_ready.png",
-  "/Easy to you.png"
-];
-
-const [currentImage, setCurrentImage] = useState(0);
-  const images = [
-  "/hero.png",
-  "/open-view.png",
-  "/FurGone Pet on Couch.png",
-  "/FurGone Thank-you card Print_ready.png",
-  "/Easy to you.png"
-];
 
 const [currentImage, setCurrentImage] = useState(0);
 export default function FurGoneWebsite() {
