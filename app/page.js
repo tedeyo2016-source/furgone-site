@@ -1,6 +1,17 @@
 "use client";
+import { useState } from "react";
 
 import { useState } from "react";
+export default function FurGoneWebsite() {
+  const images = [
+  "/hero.png",
+  "/open-view.png",
+  "/FurGone Pet on Couch.png",
+  "/FurGone Thank-you card Print_ready.png",
+  "/Easy to you.png"
+];
+
+const [currentImage, setCurrentImage] = useState(0);
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
 const [message, setMessage] = useState("");
@@ -121,7 +132,39 @@ const handleSubmit = async (e) => {
             <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-800 text-sm">
               Amazon listing link not added yet. It will be updated soon as listing goes live.
             </div>
+<div className="relative">
 
+  <img
+    src={images[currentImage]}
+    alt="FurGone Pet Hair Remover"
+    className="w-full rounded-2xl shadow"
+  />
+
+  <button
+    onClick={() =>
+      setCurrentImage(
+        currentImage === 0
+          ? images.length - 1
+          : currentImage - 1
+      )
+    }
+    className="absolute left-3 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded-full shadow"
+  >
+    ❮
+  </button>
+
+  <button
+    onClick={() =>
+      setCurrentImage(
+        (currentImage + 1) % images.length
+      )
+    }
+    className="absolute right-3 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded-full shadow"
+  >
+    ❯
+  </button>
+
+</div>
             <div className="mt-6">
               <button
                 type="button"
