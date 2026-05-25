@@ -23,8 +23,6 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, [])};
-
-const [currentImage, setCurrentImage] = useState(0);
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
 const [message, setMessage] = useState("");
