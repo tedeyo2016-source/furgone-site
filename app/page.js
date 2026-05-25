@@ -1,11 +1,8 @@
 "use client";
-
 import { useState, useEffect } from "react";
-
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
   const images = [
     "/hero.png",
     "/open-view.png",
@@ -13,20 +10,15 @@ export default function FurGoneWebsite() {
     "/FurGone Thank-you card Print_ready.png",
     "/Easy to you.png",
   ];
-
   const [currentImage, setCurrentImage] = useState(0);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await fetch(
       "https://script.google.com/macros/s/AKfycbyY-9KjRoe45Iy2KDdfMQTDUKFDqu0gZD3ycxq-I79kZjC4-wLfao5OVQGuHHN5Fme5/exec",
       {
@@ -34,25 +26,9 @@ export default function FurGoneWebsite() {
         body: JSON.stringify({ email }),
       }
     );
-
     setMessage("Thank you! We'll notify you when FurGone Pet launches.");
     setEmail("");
   };
-export default function FurGoneWebsite() {
-  const [email, setEmail] = useState("");
-const [message, setMessage] = useState("");
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  await fetch("https://script.google.com/macros/s/AKfycbyY-9KjRoe45Iy2KDdfMQTDUKFDqu0gZD3ycxq-I79kZjC4-wLfao5OVQGuHHN5Fme5/exec", {
-    method: "POST",
-    body: JSON.stringify({ email }),
-  });
-
-  setMessage("Thank you! We'll notify you when FurGone Pet launches.");
-  setEmail("");
-};
   return (
     <div className="min-h-screen bg-white text-slate-800">
       <header className="border-b bg-white">
