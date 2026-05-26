@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 export default function FurGoneWebsite() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -11,12 +11,6 @@ export default function FurGoneWebsite() {
     "/Easy to you.png",
   ];
   const [currentImage, setCurrentImage] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
     await fetch(
