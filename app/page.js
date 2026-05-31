@@ -216,7 +216,7 @@ export default function FurGoneWebsite() {
           <p className="mt-4 text-slate-500">© 2026 FurGone Pet· All rights reserved.</p>
           <div className="mt-4 flex items-center justify-center gap-6 text-slate-600">
             <a href="#" className="hover:text-slate-900">Privacy Policy</a>
-            <a href="mailto:hello@furgone.com" className="hover:text-slate-900">support@furgone.com</a>
+            <a href="mailto:hello@furgone.com" className="hover:text-slate-900">support@furgonepet.com</a>
           </div>
         </div>
       </footer>
